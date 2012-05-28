@@ -21,16 +21,22 @@ public class Main {
 	}
 
 	@Test
-	public void testUntitled() throws Exception {
+	public void login_Test() throws Exception {
 		driver.get(baseUrl + "/");
+		
+		//assert that the current page URL is the same as the expected URL.
+		assertEquals("http://newtours.demoaut.com/", driver.getCurrentUrl());
+		
 		driver.findElement(By.name("userName")).clear();
 		driver.findElement(By.name("userName")).sendKeys("mercury");
 		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys("mercury");
 		driver.findElement(By.name("login")).click();
 		
+		System.out.print(driver.getCurrentUrl());
+		
 		//assert that the current page URL is the same as the expected URL.
-		assertEquals("http://newtours.demoaut.com/mercuryreservation.php", driver.getCurrentUrl());
+		assertEquals("http://newtours.demoaut.com/", driver.getCurrentUrl());
 
 	}
 
