@@ -5,6 +5,7 @@ public class InitTravelWebsite {
 
 	private WebDriver driver;
 	
+	// Constructor
 	public InitTravelWebsite(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -18,5 +19,4 @@ public class InitTravelWebsite {
 		//assert that the current page URL is the same as the expected URL.
 		assertEquals("http://newtours.demoaut.com/", driver.getCurrentUrl());
 	}
-
 }
