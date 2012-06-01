@@ -1,5 +1,4 @@
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.*;
 import static org.junit.Assert.*;
 
@@ -24,8 +23,7 @@ public class LoginTravelWebsite {
 	
 	public void test_automateLoginTravelWebsite() {
 		//assert that the current page URL is the same as the expected URL.
-		driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		assertEquals("http://newtours.demoaut.com/mercuryreservation.php", driver.getCurrentUrl());
 	}
 

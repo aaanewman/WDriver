@@ -1,3 +1,4 @@
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import static org.junit.Assert.*;
 
@@ -17,6 +18,7 @@ public class InitTravelWebsite {
 	
 	public void test_automateInitTravelWebsite() {
 		//assert that the current page URL is the same as the expected URL.
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		assertEquals("http://newtours.demoaut.com/", driver.getCurrentUrl());
 	}
 }
